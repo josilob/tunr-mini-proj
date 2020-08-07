@@ -1,4 +1,4 @@
-![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
 
 # Rails 5 API Authentication
 
