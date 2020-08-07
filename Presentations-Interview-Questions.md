@@ -4,7 +4,7 @@
 
 In order to add structure to the presentations and interviews each group will do the following:
 
-- Someone needs to volunteer to be the timekeeper but if no one volunteers then the group is free to elect one. 
+- Someone should volunteer to be the timekeeper but if no one volunteers then the group is free to elect one. 
 - Timekeeper will manage the time and notify presenter when they have 1min left for their presentation. 
 - Timekeeper will notify presenter when their time is up. 
 
@@ -29,11 +29,11 @@ Once the projects have been presented one student will take the lead on being th
 #### Timekeeper Specific
 - Timekeeper will set the time for 5min and start the timer when everyone is ready to start. 
 - Timekeeper will follow the same process as defined previously. 
-- Once interviews are completed Timekeeper will set timer for another 2min for group feedback
+- Once interviews have completed the Timekeeper will set timer for another 2min for group feedback
 
 #### Interview Specific
 - Each student, not currently being interviewed, will ask one question to the interviewee from the pool of questions provided. 
-- Interviewee will answer the question to the best of their knowledge and experience.
+- The interviewee will answer the question to the best of their knowledge and experience.
 - Once completed the group will elect another member to be interviewed. 
 
 #### Feedback
