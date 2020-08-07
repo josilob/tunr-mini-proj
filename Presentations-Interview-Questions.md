@@ -1,4 +1,6 @@
-### Setup
+# Mini Rails Project Presentations
+
+## Setup
 
 In order to add structure to the presentations and interviews each group will do the following:
 
@@ -6,7 +8,7 @@ In order to add structure to the presentations and interviews each group will do
 - Timekeeper will manage the time and notify presenter when they have 1min left for their presentation. 
 - Timekeeper will notify presenter when their time is up. 
 
-### Presentation
+## Presentations
 
 Students will remain in their groups and present their project to the their fellow jr. developers. 
 
@@ -18,9 +20,31 @@ The presentation will consist of the following:
 - Explains which improvements you made to the front end
 - Explain any additional features you wish to discuss
 
-### Interviews
+After each student has presented their projects the interview session will commence. 
 
-Once the projects have been presented one student will take the lead on being the first to be asked any 2 of the following interview questions from the their fellow js. developers. 
+## Interviews
+
+Once the projects have been presented one student will take the lead on being the first to be interviewed.  
+
+#### Timekeeper Specific
+- Timekeeper will set the time for 5min and start the timer when everyone is ready to start. 
+- Timekeeper will follow the same process as defined previously. 
+- Once interviews are completed Timekeeper will set timer for another 2min for group feedback
+
+#### Interview Specific
+- Each student, not currently being interviewed, will ask one question to the interviewee from the pool of questions provided. 
+- Interviewer will answer the question to the best of their knowledge and experience.
+- Once completed the group will elect another member to be interviewed. 
+
+#### Feedback
+
+Once the interviewee has completed their turn the group will provided 2min to provide feedback in the form of `glows` and `grows`
+
+- glow - something they did well
+- grow - constructive feedback on one area they could improve upon
+
+
+### Interview Questions
 
 - Can you discuss the filters that you choose to use in your controllers?
 - What models did you use for your app and were you able to build a relationship between them, be it one to many or many to many? 
