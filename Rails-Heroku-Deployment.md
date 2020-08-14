@@ -39,13 +39,7 @@ In the welcome controller file, let's just send some stuff from the index method
 ![](https://i.imgur.com/14nBStv.png)
 
 
-**Open your Rails API in the browser to check that the root works**
 
-* Init, Add, commit and push your welcome and root stuff to Github in preparation for pushing to Heroku
-
-* run `heroku buildpacks:set heroku/ruby`
-
-<br>
 
 ## Set up Heroku and Push
 
@@ -56,6 +50,14 @@ In the directory of your own desktop copy of the Rails noticeboard api, create a
 Example from a books app:
 
 ![](https://i.imgur.com/hf6oZlz.png)
+
+**Open your Rails API in the browser to check that the root works**
+
+* Init, Add, commit and push your welcome and root stuff to Github in preparation for pushing to Heroku
+
+* run `heroku buildpacks:set heroku/ruby`
+
+<br>
 
 * `git push heroku master`
 
