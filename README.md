@@ -60,4 +60,4 @@ Don't forget: a **technical demonstration** of your app which:
 <hr>
 
 ## Submission Guidelines
-&#10004; When completed submit the assignment [here](https://docs.google.com/forms/d/e/1FAIpQLSeroos9mbUxkYhzETYq4dylzqb_il07tKHBby2YPLkqb0Wr9Q/viewform). 
+&#10004; When completed submit the assignment [here](https://docs.google.com/spreadsheets/d/1dz0OP4m1aaLbZcj8QiBHWuXN27hPCItsJsLINrT8Kf0/edit#gid=1499699257). 
