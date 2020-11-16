@@ -1,0 +1,50 @@
+  [1m[35m (227.7ms)[0m  [1m[35mCREATE DATABASE "tunr_mini_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (134.5ms)[0m  [1m[35mCREATE DATABASE "tunr_mini_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1444813535664371565)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSongs (20201116155549)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "title" character varying, "artist" character varying, "time" character varying, "fav" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201116155549"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-16 16:06:01.916646"], ["updated_at", "2020-11-16 16:06:01.916646"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1444813535664371565)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (1.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Kashmir"], ["artist", "Led Zeppelin"], ["time", "8:31"], ["fav", false], ["created_at", "2020-11-16 16:06:07.966215"], ["updated_at", "2020-11-16 16:06:07.966215"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "All along the watchtower"], ["artist", "Jimi Hendrix"], ["time", "4:01"], ["fav", false], ["created_at", "2020-11-16 16:06:07.973229"], ["updated_at", "2020-11-16 16:06:07.973229"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "We will rock you"], ["artist", "Queen"], ["time", "2:14"], ["fav", false], ["created_at", "2020-11-16 16:06:07.977778"], ["updated_at", "2020-11-16 16:06:07.977778"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Whole lotta love"], ["artist", "Led Zeppelin"], ["time", "5:34"], ["fav", false], ["created_at", "2020-11-16 16:06:07.981703"], ["updated_at", "2020-11-16 16:06:07.981703"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Roxanne"], ["artist", "The Police"], ["time", "3:10"], ["fav", false], ["created_at", "2020-11-16 16:06:07.986385"], ["updated_at", "2020-11-16 16:06:07.986385"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Here I go again"], ["artist", "Whitesnake"], ["time", "4:31"], ["fav", false], ["created_at", "2020-11-16 16:06:08.000364"], ["updated_at", "2020-11-16 16:06:08.000364"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Jack and Dianne"], ["artist", "John Mellencamp"], ["time", "4:17"], ["fav", false], ["created_at", "2020-11-16 16:06:08.005399"], ["updated_at", "2020-11-16 16:06:08.005399"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Dont stop believin"], ["artist", "Journey"], ["time", "4:10"], ["fav", false], ["created_at", "2020-11-16 16:06:08.009893"], ["updated_at", "2020-11-16 16:06:08.009893"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "American Girl"], ["artist", "Tom Petty"], ["time", "3:32"], ["fav", false], ["created_at", "2020-11-16 16:06:08.014063"], ["updated_at", "2020-11-16 16:06:08.014063"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "artist", "time", "fav", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Rebell yell"], ["artist", "Billy Idol"], ["time", "4:45"], ["fav", false], ["created_at", "2020-11-16 16:06:08.018768"], ["updated_at", "2020-11-16 16:06:08.018768"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" LIMIT $1[0m  [["LIMIT", 11]]
