@@ -3,39 +3,37 @@ class SongsController < ApplicationController
 
   # GET /songs
   def index
-    @songs = Song.all
-
-    render json: @songs
-  end
+        songs = Song.all
+        render json: {status: 200, songs: songs}
+    end
 
   # GET /songs/1
   def show
-    render json: @song
+    song = Song.find(params[:id])
+    render(json: {song: song})
   end
 
   # POST /songs
   def create
-    @song = Song.new(song_params)
-
-    if @song.save
-      render json: @song, status: :created, location: @song
+    song = Song.new(song_params)
+    if song.save
+      render json: { song: song }
     else
-      render json: @song.errors, status: :unprocessable_entity
+      render(status: 422, json: { song: song, errors: song.errors })
     end
   end
 
   # PATCH/PUT /songs/1
   def update
-    if @song.update(song_params)
-      render json: @song
-    else
-      render json: @song.errors, status: :unprocessable_entity
-    end
+    song = Song.find(params[:id])
+    song.update(song_params)
+    render(status: 200, json: {song:song})
   end
 
   # DELETE /songs/1
   def destroy
-    @song.destroy
+    song = Song.destroy(params[:id])
+    render(status: 204)
   end
 
   private
@@ -48,4 +46,4 @@ class SongsController < ApplicationController
     def song_params
       params.require(:song).permit(:title, :artist, :time, :fav)
     end
-end
+  end 
