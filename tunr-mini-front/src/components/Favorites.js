@@ -24,15 +24,15 @@ const Favorites = (props) => {
 			</>
 		);
 	});
-
 	const loading = 'Add some songs to favorite section!';
+	const display = props.favorites.length > 0 ? favesLoaded : loading;
 
 	return (
 		<>
 			<div className='faves'>
 				<h3>Favorites</h3>
 			</div>
-			{props.favorites.length > 0 ? favesLoaded : loading}
+			{display}
 		</>
 	);
 };
