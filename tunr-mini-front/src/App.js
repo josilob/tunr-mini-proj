@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header.js';
 import Form from './components/Form';
 import Playlist from './components/Playlist';
+import Favorites from './components/Favorites';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
 	const url = 'http://localhost:3000';
@@ -15,8 +15,7 @@ function App() {
 		time: '',
 	};
 	const [songs, setSongs] = React.useState(emptySong);
-
-	const [selectedSong, setSelectedSong] = React.useState(emptySong);
+	const [favorites, setFavorites] = React.useState([]);
 
 	//fetch songs
 	const getSongs = () => {
@@ -24,10 +23,8 @@ function App() {
 			.then((response) => response.json())
 			.then((data) => {
 				setSongs(data.songs);
-				console.log(data.songs);
 			});
 	};
-
 	//get songs on page load
 	React.useEffect(() => {
 		getSongs();
@@ -44,22 +41,6 @@ function App() {
 		}).then((response) => getSongs());
 	};
 
-	//update songs
-	const handleUpdate = (song) => {
-		fetch(url + '/songs/' + song.id, {
-			method: 'put',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(song),
-		}).then((response) => getSongs());
-	};
-
-	//select song
-	const selectSong = (song) => {
-		setSelectedSong(song);
-	};
-
 	//delete song
 	const deleteSong = (song) => {
 		fetch(url + '/songs/' + song.id, {
@@ -67,43 +48,44 @@ function App() {
 		}).then((response) => getSongs());
 	};
 
+	const toggleFave = (song) => {
+		const favs = [...favorites];
+		const idx = favs.indexOf(song);
+		favs.includes(song) ? favs.splice(idx, 1) : favs.push(song);
+		setFavorites(favs);
+	};
 	return (
 		<Router>
 			<div className='App'>
-				<Header />
+				<h1>TUNR.</h1>
+				<h6>FOR ALL YOUR PLAYLIST NEEDS</h6>
+				<hr />
+				<h1>PLAYLIST 1</h1>
 
 				<h3>ADD A NEW Song</h3>
-				<main>
+				<main id='mainbox'>
 					<Switch>
 						<Route
 							exact
 							path='/'
 							render={(rp) => (
 								<div>
-									<Playlist
-										songs={songs}
-										deleteSong={deleteSong}
-										selectSong={selectSong}
-									/>
+									<div id='playlist'>
+										<Playlist
+											songs={songs}
+											deleteSong={deleteSong}
+											toggleFave={toggleFave}
+											// selectSong={selectSong}
+										/>
+									</div>
 									<Form
 										{...rp}
 										label='Add New Song'
 										song={emptySong}
 										handleSubmit={handleCreate}
 									/>
+									<Favorites favorites={favorites} toggleFave={toggleFave} />
 								</div>
-							)}
-						/>
-						<Route
-							exact
-							path='/edit'
-							render={(rp) => (
-								<Form
-									{...rp}
-									label='Save'
-									song={selectedSong}
-									handleSubmit={handleUpdate}
-								/>
 							)}
 						/>
 					</Switch>

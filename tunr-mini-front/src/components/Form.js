@@ -12,7 +12,6 @@ const Form = (props) => {
 		event.preventDefault();
 		props.handleSubmit(formData);
 		setFormData(emptySong);
-		props.history.push('/');
 	};
 
 	const handleChange = (event) => {
@@ -28,6 +27,7 @@ const Form = (props) => {
 				value={formData.title}
 				onChange={handleChange}
 			/>
+			<br />
 			<input
 				id='artist'
 				type='text'
@@ -35,6 +35,7 @@ const Form = (props) => {
 				value={formData.artist}
 				onChange={handleChange}
 			/>
+			<br />
 			<input
 				id='time'
 				type='text'
@@ -42,6 +43,7 @@ const Form = (props) => {
 				value={formData.time}
 				onChange={handleChange}
 			/>
+			<br />
 			<input type='submit' value={props.label} />
 		</form>
 	);

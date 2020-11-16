@@ -1,4 +1,4 @@
-import React, { Link } from 'react';
+import React from 'react';
 
 const Playlist = (props) => {
 	const songs = props.songs;
@@ -7,7 +7,7 @@ const Playlist = (props) => {
 		const JSX = songs.map((song) => {
 			const favSong = song.fav ? <span color='red'>Fav</span> : <>Fav</>;
 			return (
-				<article>
+				<article key={song.id}>
 					<p>
 						{song.title} , {song.artist}, {song.time}
 						&nbsp;&nbsp;
@@ -17,13 +17,11 @@ const Playlist = (props) => {
 							}}>
 							Del
 						</button>
-						<button>&nbsp; {favSong} &nbsp; </button>
 						<button
 							onClick={() => {
-								props.selectSong(song);
-								props.history.push('/edit');
+								props.toggleFave(song);
 							}}>
-							Edit
+							{favSong}
 						</button>
 					</p>
 				</article>
