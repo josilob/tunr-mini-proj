@@ -27,21 +27,21 @@ After each student has presented their projects the interview session will comme
 Once the projects have been presented one student will take the lead on being the first to be interviewed.  
 
 #### Timekeeper Specific
-- Timekeeper will set the time for 5min and start the timer when everyone is ready to start. 
+- Timekeeper will set the timer for 8min and start the timer when everyone is ready to start. 
 - Timekeeper will follow the same process as defined previously. 
 - Once interviews have completed the Timekeeper will set timer for another 2min for group feedback
 
 #### Interview Specific
 - Each student, not currently being interviewed, will ask one question to the interviewee from the pool of questions provided. 
-- The interviewee will answer the question to the best of their knowledge and experience.
+- The interviewee will answer the question to the best of their knowledge and experience along with providing any relevant examples.
 - Once completed the group will elect another member to be interviewed. 
 
 #### Feedback
 
 Once the interviewee has completed their turn the group will provided 2min to provide feedback in the form of `glows` and `grows`
 
-- glow - something they did well
-- grow - constructive feedback on one area they could improve upon
+- glow - something the interviewee did well
+- grow - constructive feedback on one area the interviewee could improve upon
 
 
 ### Interview Questions
